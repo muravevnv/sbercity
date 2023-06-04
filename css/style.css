@@ -5949,6 +5949,9 @@ textarea.form-control {
   padding: 24px 0;
   display: flex;
 }
+.finish-type.is-active .finish-type__title {
+  color: #5FC5AB;
+}
 .finish-type__img {
   width: 64px;
   height: 64px;
@@ -5983,14 +5986,31 @@ textarea.form-control {
   height: 24px;
   border-radius: 50%;
   border: 1px solid transparent;
-  padding: 3px;
+}
+.finish-type__theme-item span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+.finish-type__theme-item.is-active {
+  border-color: #5FC5AB;
 }
 .finish-type__theme-white {
-  background: #E3E5E7;
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.08);
   margin-right: 10px;
 }
-.finish-type__theme-black {
+.finish-type__theme-white span {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ffffff;
+  background: #E3E5E7;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.08);
+}
+.finish-type__theme-black span {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ffffff;
   background: #333F48;
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.08);
 }
@@ -6064,6 +6084,12 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
   }
+  .finish-panel__show.is-active {
+    background-color: #333F48;
+  }
+  .finish-panel__show.is-active svg path {
+    fill: #ffffff;
+  }
 }
 @media (max-width: 1023px) {
   .finish-panel__close {
@@ -6075,8 +6101,14 @@ textarea.form-control {
     justify-content: center;
     display: none;
   }
+  .finish-panel__close.is-show {
+    display: flex;
+  }
 }
 
+.finish-panel-popup {
+  width: 100%;
+}
 @media (max-width: 1023px) {
   .finish-panel-popup {
     position: absolute;
@@ -6088,16 +6120,25 @@ textarea.form-control {
     padding: 0 24px;
     display: none;
   }
+  .finish-panel-popup.is-open {
+    display: block;
+  }
+}
+.finish-panel-popup__btn {
+  display: none;
+  height: 64px;
+  width: 100%;
+  text-align: center;
+  background-color: #14191D;
+  color: #ffffff;
+  width: calc(100% + 48px);
+  margin: 0 -24px;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 25px;
+}
+@media (max-width: 1023px) {
   .finish-panel-popup__btn {
-    height: 64px;
-    width: 100%;
-    text-align: center;
-    background-color: #14191D;
-    color: #ffffff;
-    width: calc(100% + 48px);
-    margin: 0 -24px;
-    font-size: 12px;
-    line-height: 14px;
-    padding: 25px;
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

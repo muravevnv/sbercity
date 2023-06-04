@@ -159,4 +159,54 @@ sortBtns.forEach(function(item){
 })
 
 
+let $finishSections = $('.finish-section');
 
+
+let $finishOpen = $finishSections.closest('.finish-panel__show');
+let $finishPopup = $finishSections.closest('.finish-panel-popup');
+
+$finishOpen.on('click', function(){
+  $finishPopup.addClass('is-open')
+})
+
+console.log($finishOpen)
+
+$finishSections.each(function() {
+  let $section = $(this);
+
+  let $panelOpen = $section.find('.finish-panel__show');
+  let $panelClose = $panelOpen.next();
+  let $panel = $section.find('.finish-panel-popup');
+
+  $panelOpen.on('click', function(){
+    showPanel();
+  })
+
+  $panelClose.on('click', function(){
+    closePanel();
+  })
+
+  function showPanel() {
+    $panelClose.addClass('is-show')
+    $panelOpen.addClass('is-active')
+    $panel.addClass('is-open');
+  }
+
+  function closePanel () {
+    $panel.removeClass('is-open');
+    $panelClose.removeClass('is-show')
+    $panelOpen.removeClass('is-active')
+  }
+})
+
+// $('.finish-panel__show').on('click', function(){
+//   $(this).addClass('is-active')
+//   $(this).next().addClass('is-show')
+//   $('.finish-panel-popup').addClass('is-open')
+// })
+
+// $('.finish-panel__close').on('click', function(){
+//   $(this).removeClass('is-show')
+//   $(this).prev().removeClass('is-active')
+//   $('.finish-panel-popup').removeClass('is-open')
+// })

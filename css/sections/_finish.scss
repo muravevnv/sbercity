@@ -143,6 +143,12 @@
   padding: 24px 0;
   display: flex;
 
+  &.is-active {
+    .finish-type__title {
+      color: #5FC5AB;
+    }
+  }
+
   &__img {
     width: 64px;
     height: 64px;
@@ -181,18 +187,43 @@
       height: 24px;
       border-radius: 50%;
       border: 1px solid transparent;
-      padding: 3px;
+
+      span {
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1px solid $white;
+      }
+
+      &.is-active {
+        border-color:#5FC5AB;
+      }
     }
 
     &-white {
-      background: #E3E5E7;
-      box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.08);
       margin-right: 10px;
+
+      span {
+        width: 22px;
+        height: 22px;
+        border: 1px solid $white;
+        background: #E3E5E7;
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.08);
+        
+      }
     }
 
     &-black {
-      background: #333F48;
+      
+
+      span {
+        width: 22px;
+        height: 22px;
+        border: 1px solid $white;
+        background: #333F48;
       box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.08);
+      }
     }
   }
 }
@@ -264,6 +295,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &.is-active {
+        background-color: #333F48;
+
+        svg path {
+          fill: $white;
+        }
+      }
     }
 
     &__close {
@@ -274,11 +313,16 @@
       align-items: center;
       justify-content: center;
       display: none;
+
+      &.is-show {
+        display: flex;
+      }
     }
   }
 }
 
 .finish-panel-popup {
+  width: 100%;
 
   @media(max-width: 1023px) {
     position: absolute;
@@ -290,17 +334,28 @@
     padding: 0 24px;
     display: none;
 
-    &__btn {
-      height: 64px;
-      width: 100%;
-      text-align: center;
-      background-color: #14191D;
-      color: $white;
-      width: calc(100% + 48px);
-      margin: 0 -24px;
-      font-size: 12px;
-      line-height: 14px;
-      padding: 25px;
+    &.is-open {
+      display: block;
+    }
+
+  }
+
+  
+  &__btn {
+    display: none;
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    background-color: #14191D;
+    color: $white;
+    width: calc(100% + 48px);
+    margin: 0 -24px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 25px;
+
+    @media(max-width: 1023px) {
+      display: block;
     }
   }
 }
