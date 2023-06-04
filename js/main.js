@@ -160,16 +160,8 @@ sortBtns.forEach(function(item){
 
 
 let $finishSections = $('.finish-section');
-
-
 let $finishOpen = $finishSections.closest('.finish-panel__show');
 let $finishPopup = $finishSections.closest('.finish-panel-popup');
-
-$finishOpen.on('click', function(){
-  $finishPopup.addClass('is-open')
-})
-
-console.log($finishOpen)
 
 $finishSections.each(function() {
   let $section = $(this);
