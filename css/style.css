@@ -4254,6 +4254,11 @@ textarea.form-control {
     border-bottom: 1px solid #E3E5E7;
   }
 }
+@media (max-width: 375px) {
+  .header {
+    height: 56px;
+  }
+}
 .header__btn {
   padding: 25px 43.5px;
   font-size: 12px;
@@ -4264,6 +4269,14 @@ textarea.form-control {
   cursor: pointer;
   font-weight: 500;
 }
+@media (max-width: 375px) {
+  .header__btn {
+    padding: 21px 32px;
+  }
+}
+.header__logo {
+  padding: 0 20px;
+}
 .header__tel {
   padding: 25px 20px;
   font-size: 12px;
@@ -4273,10 +4286,16 @@ textarea.form-control {
   text-decoration: none;
   color: #14191D;
   font-weight: 500;
+  white-space: nowrap;
 }
 @media screen and (max-width: 767.98px) {
   .header__tel {
     border-left: 1px solid #E3E5E7;
+  }
+}
+@media (max-width: 375px) {
+  .header__tel {
+    padding: 21px 11px;
   }
 }
 
@@ -4531,6 +4550,7 @@ textarea.form-control {
   }
 }
 .advantages-city .advantages-item__picture {
+  max-width: 660px;
   margin: 44px auto 0;
 }
 @media screen and (max-width: 767.98px) {

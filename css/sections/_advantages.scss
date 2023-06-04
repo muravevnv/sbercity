@@ -33,6 +33,7 @@
     }
 
     .advantages-item__picture {
+      max-width: 660px;
       margin: 44px auto 0;
 
       @include media-md('down') {
