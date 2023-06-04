@@ -179,15 +179,15 @@ $finishSections.each(function() {
   })
 
   function showPanel() {
-    $panelClose.addClass('is-show')
-    $panelOpen.addClass('is-active')
+    $panelClose.addClass('is-show');
+    $panelOpen.addClass('is-active');
     $panel.addClass('is-open');
   }
 
   function closePanel () {
     $panel.removeClass('is-open');
-    $panelClose.removeClass('is-show')
-    $panelOpen.removeClass('is-active')
+    $panelClose.removeClass('is-show');
+    $panelOpen.removeClass('is-active');
   }
 })
 
