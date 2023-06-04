@@ -115,13 +115,14 @@
 
   &-smart {
     overflow: hidden;
+    background-color: $white;
 
     .advantages-item__picture {
       position: absolute;
       max-width: 466px;
       width: 50%;
 
-      z-index: -1;
+      z-index: 1;
       bottom: -92px;
       right: 0;
 
