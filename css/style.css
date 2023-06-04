@@ -4425,7 +4425,7 @@ textarea.form-control {
 }
 @media (max-width: 1023px) {
   .hero {
-    min-height: initial;
+    height: auto;
     padding-top: 361px;
     padding-bottom: 74px;
   }
@@ -4472,6 +4472,7 @@ textarea.form-control {
   .hero__title {
     font-size: 36px;
     line-height: 38px;
+    margin: 0;
   }
 }
 @media screen and (max-width: 767.98px) {

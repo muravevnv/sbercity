@@ -11,7 +11,7 @@
   align-items: flex-end;
 
   @media(max-width: 1023px) {
-    min-height: initial;
+    height: auto;
     padding-top: 361px;
     padding-bottom: 74px;
   }
@@ -55,6 +55,7 @@
     @media(max-width: 1023px) {
       font-size: 36px;
       line-height: 38px;
+      margin: 0;
     }
 
     @include media-md('down') {
