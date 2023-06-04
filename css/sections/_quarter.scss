@@ -267,6 +267,12 @@
 
   @media(max-width: 1023px) {
     pointer-events: none;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    font-family: 'SB Sans Display', sans-serif;
+    color: #9BA1AA;
+    text-transform: uppercase;
   }
 }
 

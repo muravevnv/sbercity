@@ -5318,6 +5318,12 @@ textarea.form-control {
 @media (max-width: 1023px) {
   .swiper-pagination {
     pointer-events: none;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    font-family: "SB Sans Display", sans-serif;
+    color: #9BA1AA;
+    text-transform: uppercase;
   }
 }
 
@@ -5487,6 +5493,12 @@ textarea.form-control {
   transform: scale(0.5);
   transition: 0.2s;
   opacity: 0;
+}
+@media (max-width: 1023px) {
+  .standarts-item.is-balanced, .standarts-item.is-optimum, .standarts-item.is-advanced, .standarts-item.is-superb {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .standarts-item.is-balanced .standarts-item__title,
 .standarts-item.is-balanced .standarts-item__icon, .standarts-item.is-optimum .standarts-item__title,

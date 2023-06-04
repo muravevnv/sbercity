@@ -117,6 +117,11 @@
     transition: 0.2s;
     opacity: 0;
 
+    @media (max-width: 1023px) {
+      opacity: 1;
+      transform: scale(1);
+    }
+
     .standarts-item__title,
     .standarts-item__icon {
       opacity: 0;
