@@ -78,15 +78,13 @@ finishGalleryItems.forEach(function(item) {
       delay: 2000,
       disableOnInteraction: false
     },
-    loop: true,
+
     watchSlidesProgress: true,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false
     },
-    loop: true,
-    watchSlidesProgress: true,
-    
+
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -115,13 +113,6 @@ finishGalleryItems.forEach(function(item) {
 })
 
 
-
-
-
-
-
-
-//Табы
 if (document.querySelector('[data-role*="tabs"]')) {
   let tabsContainers = document.querySelectorAll('[data-role*="tabs"]');
   tabsContainers.forEach((wrapper) => {
