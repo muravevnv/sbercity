@@ -1,0 +1,259 @@
+.features {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+
+  @media(max-width: 1023px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.features-head {
+  position: relative;
+  max-width: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 31px 24px 34px;
+
+  @media(max-width: 1023px) {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 24px 64px;
+    position: relative;
+  }
+
+  @include media-md('down') {
+    flex-direction: column;
+    padding: 28px 16px 48px;
+  }
+
+  &__subtitle {
+    font-family: "SB Sans Display", sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    color: $grey;
+    position: absolute;
+    top: 30px;
+    left: 24px;
+    text-transform: uppercase;
+
+    @media(max-width: 1023px) {
+      position: static;
+      margin-bottom: 4px;
+      font-family: 'SB Sans Text', sans-serif;
+      letter-spacing: -0.5px;
+    }
+
+  }
+
+  &__title {
+    font-family: "SB Sans Display", sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    padding-top: 30px; 
+    
+    @media(max-width: 1023px) {
+      padding-top: 0;
+    }
+
+    @include media-md('down') {
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    span {
+      display: block;
+      color: $grey-l;
+    }
+  }
+
+  &__info {
+    margin: auto 0 0 0;
+
+    @media(max-width: 1023px) {
+      max-width: 220px;
+      width: 100%;
+      margin: 0;
+    }
+    
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -1px;
+    max-width: 220px;
+    font-weight: 500;
+  }
+}
+
+.features-items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 33.3333%;
+  height: 50%;
+  padding: 24px;
+  color: $white;
+
+  @media(max-width: 1023px) {
+    width: 50%;
+    height: 302px;
+  }
+
+  @include media-md('down') {
+    width: 100%;
+    padding: 16px;
+    height: 240px;
+  }
+
+  &--xl {
+    width: 100%;
+
+    @media(max-width: 1023px) {
+      width: 60%;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    font-weight: 500;
+
+    @include media-md('down') {
+      font-size: 12px;
+      line-height: 14px;
+    }
+   
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -1px;
+    max-width: 272px;
+    color: $grey-l;
+    margin: auto 0 0 0;
+
+    @include media-md('down') {
+      max-width: 100%;
+    }
+  }
+
+  &__picture {
+    margin: auto;
+  }
+}
+
+
+.feature-planing {
+  position: relative;
+  color: $white;
+  background: transparent;
+
+  @media(max-width: 1023px) {
+    order: 3;
+  }
+
+  @include media-md('down') {
+    width: 100%;
+  }
+  
+
+  .features-item__picture {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .features-item__text {
+    max-width: 340px;
+  }
+}
+
+.features-care {
+  background-color: #107F8C;
+
+  @media(max-width: 1023px) {
+    order: 4;
+    width: 40%;
+  }
+
+  @include media-md('down') {
+    width: 100%;
+  }
+}
+
+.features-area {
+  background-color: #1F262B;
+}
+
+.features-video {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: url('../images/features-video.png') center center / cover no-repeat;
+  text-decoration: none;
+
+  &:hover {
+    .features-video__link {
+      opacity: 1;
+      transform: translateY(0);
+      transition: .4s;
+      height: 56px;
+    }
+
+    .features-item__title{
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #29323A;
+    z-index: 2;
+    color: $white;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.5px;
+    
+    text-align: center;
+    width: calc(100% + 48px);
+    margin: 24px -24px -24px;
+    transform: translateY(80px);
+    opacity: 0;
+    height: 0px;
+    transition: .4s;
+ 
+  }
+}

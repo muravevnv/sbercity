@@ -1,0 +1,30 @@
+@import 'utilities/functions';
+@import 'utilities/breakpoints';
+@import "utilities/grid";
+
+@import 'utilities/text';
+@import 'utilities/spacing';
+@import 'utilities/display';
+@import 'utilities/flex';
+
+@if $enable-grid-classes {
+    .row {
+        @include make-row();
+
+        > * {
+            @include make-col-ready();
+        }
+    }
+    @include make-grid-columns();
+}
+
+@if $enable-cssgrid {
+    .grid {
+        display: grid;
+        grid-template-rows: repeat(var(--#{$variable-prefix}rows, 1), 1fr);
+        grid-template-columns: repeat(var(--#{$variable-prefix}columns, #{$grid-columns}), 1fr);
+        gap: var(--#{$variable-prefix}gap, #{$grid-gutter-width});
+
+        @include make-cssgrid();
+    }
+}

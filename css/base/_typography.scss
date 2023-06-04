@@ -1,0 +1,155 @@
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+p {
+    margin: 0;
+
+    &:not(:last-child) {
+        margin: 0 0 $font-size-base;
+    }
+}
+
+a {
+    @include media-hover {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.reset-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &>li {
+        display: inline;
+        margin: 0;
+    }
+}
+
+.reset-btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background-color: transparent;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+    /* Normalize line-height. Cannot be changed from normal in Firefox 4+. */
+    line-height: normal;
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    /* Corrects inability to style clickable input types in iOS */
+    -webkit-appearance: none;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow-visible {
+    overflow: visible !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.bg-message {
+    margin: 0 0 8px;
+    padding: 2vw;
+    font-size: 16px;
+}
+
+.bg-primary {
+    color: #fff;
+    background-color: $bg;
+
+    &:hover {
+        background-color: $bg;
+    }
+}
+
+.bg-success {
+    color: $black;
+    background-color: $success;
+
+    &:hover {
+        background-color: $success;
+    }
+}
+
+.bg-info {
+    color: $black;
+    background-color: $info;
+
+    &:hover {
+        background-color: $info;
+    }
+}
+
+.bg-danger {
+    color: $black;
+    background-color: $error;
+
+    &:hover {
+        background-color: $error;
+    }
+}
+
+
+.color-white {
+    color: $white;
+}
+
+.hover-underline {
+    text-decoration: none;
+
+    @include media-hover {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.hover-opacity {
+    transition: $transition opacity ease-in-out;
+
+    @include media-hover {
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-title {
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 500;
+    padding-bottom: 40px;
+}

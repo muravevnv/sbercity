@@ -1,0 +1,76 @@
+
+
+$white: #ffffff !default;
+$black: #111111 !default;
+$signalBlack: #333333 !default;
+$orange: #F39D57 !default;
+$marengo: #4B5976 !default;
+$veryPaleBlue: #E8E9EC !default;
+$smokyWhite: #F9F9F9 !default;
+
+$grey-l: #E3E5E7;
+$grey: #BFC3C9;
+
+$bg: $white;
+$color: $black;
+$btnColor: $orange !default;
+$darkBg: $marengo !default;
+
+$success: #28a745 !default;
+$info: #17a2b8 !default;
+$warning: #ffc107 !default;
+$error: #dc3545 !default;
+$transition: .3s !default;
+
+$font-family-base: "SB Sans Text", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$font-size-base: 16px !default;
+$font-line-base: 1.3 !default;
+
+$xs: 375px !default;
+$sm: 576px !default;
+$md: 768px !default;
+$lg: 992px !default;
+$xl: 1200px !default;
+$xxl: 1400px !default;
+
+$spacer: 15px !default;
+$spacers: (
+        0: 0,
+        1: $spacer,
+        2: $spacer * 2,
+        3: $spacer * 3,
+        4: $spacer * 4,
+        5: $spacer * 5,
+) !default;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: $sm,
+        md: $md,
+        lg: $lg,
+        xl: $xl,
+        xxl: $xxl
+) !default;
+
+$displays: (
+        'inline',
+        'inline-block',
+        'block',
+            //'table',
+            //'table-row',
+            //'table-cell',
+        'flex',
+        'inline-flex',
+        'none'
+) !default;
+
+
+$container-width: $xl !default;
+$grid-columns: 12 !default;
+$grid-row-columns: 6 !default;
+$grid-gutter-width: 30px !default;
+$gutters: $spacers !default;
+$enable-grid-classes: true !default;
+$enable-cssgrid: false !default;
+$variable-prefix: bs- !default;

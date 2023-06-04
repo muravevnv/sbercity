@@ -1,0 +1,17 @@
+@include font-face(
+    'SB Sans Display',
+    '../fonts/SBSansDisplay-Regular',
+    400
+);
+
+@include font-face(
+    'SB Sans Text',
+    '../fonts/SBSansText-Regular',
+    400
+);
+
+@include font-face(
+    'SB Sans Text',
+    '../fonts/SBSansText-Semibold',
+    500
+)

@@ -1,0 +1,74 @@
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin background($path, $position: center center, $repeat: no-repeat, $size: cover) {
+    background: {
+        image: url($path);
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+
+@mixin center($position) {
+    position: absolute;
+
+    @if $position == 'vertical' {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    } @else if $position == 'horizontal' {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%);
+    } @else if $position == 'both' {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name + '.woff2') format('woff2'),
+        url($file-name + '.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+} 
+
+@function get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

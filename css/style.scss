@@ -1,0 +1,24 @@
+@import 'utilites/variables';
+@import 'utilites/media-queries';
+@import 'utilites/rem';
+@import 'utilites/mixins';
+
+@import 'base/reboot';
+@import 'grid/grid';
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/form';
+@import 'base/popup';
+@import 'base/header';
+@import 'base/footer';
+
+@import 'base/style';
+
+@import 'sections/hero';
+@import 'sections/advantages';
+@import 'sections/infrastructure';
+@import 'sections/features';
+@import 'sections/quarter';
+@import 'sections/standarts';
+@import 'sections/finish';
