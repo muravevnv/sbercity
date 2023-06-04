@@ -15,7 +15,7 @@ quarterGalleryItems.forEach(function(item) {
   let pagination = item.querySelector('.swiper-pagination');
 
   const quarterGallery = new Swiper(item, {
-    parallax: true,
+
     effect: "slide",
     slidesPerView: 1,
     speed: 2000,
