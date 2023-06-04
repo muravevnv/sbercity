@@ -23,6 +23,7 @@
     background: url('../images/btn-bg.png') center center / cover  no-repeat;
     color: #FFF;
     cursor: pointer;
+    font-weight: 500;
   }
 
   &__tel {
@@ -33,6 +34,7 @@
     cursor: pointer;
     text-decoration: none;
     color: $black;
+    font-weight: 500;
 
     @include media-md('down') {
       border-left: 1px solid #E3E5E7;

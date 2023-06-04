@@ -15,21 +15,18 @@ quarterGalleryItems.forEach(function(item) {
   let pagination = item.querySelector('.swiper-pagination');
 
   const quarterGallery = new Swiper(item, {
-
+    parallax: true,
+    effect: "slide",
     slidesPerView: 1,
+    speed: 2000,
     navigation: {
       prevEl: prevBtn,
       nextEl: nextBtn
     },
   
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false
-    },
-
     watchSlidesProgress: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
       disableOnInteraction: false
     },
 

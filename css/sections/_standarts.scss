@@ -122,6 +122,10 @@
       transform: scale(1);
     }
 
+    .standarts-item__title {
+      color: #F2F3F3;
+    }
+
     .standarts-item__title,
     .standarts-item__icon {
       opacity: 0;
@@ -148,10 +152,37 @@
     }
   }
 
+  &.standart-item--covorking {
+    @media (max-width: 1023px) {
+      order: 14 !important;
+    }
+  }
+
+  &.standart-item--gym {
+    @media (max-width: 1023px) {
+      order: 16 !important;
+    }
+  }
+  &.standart-item--terrace {
+    @media (max-width: 1023px) {
+      order: 13 !important;
+    }
+  }
+  &.standart-item--kids {
+    @media (max-width: 1023px) {
+      order: 15 !important;
+    }
+  }
+
   &__title {
     margin-top: 24px;
     font-size: 8px;
     letter-spacing: -0.5px;
+   
+
+    .advanced {
+      display: none;
+    }
 
     @include media-md("down") {
       margin-top: 16px;
@@ -234,6 +265,13 @@
 
       .standarts-item__title {
         opacity: 1;
+
+        .advanced {
+          display: block !important;
+        }
+        .optimum {
+          display: none !important;
+        }
       }
 
       .standarts-item__icon {

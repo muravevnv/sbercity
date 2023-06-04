@@ -131,6 +131,7 @@
   }
 
   &__title {
+    font-family: $font-family-base;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -1px;
@@ -201,6 +202,10 @@
 .features-care {
   background-color: #107F8C;
 
+  .features-item__picture {
+    margin: 58px auto 0;
+  }
+
   @media(max-width: 1023px) {
     order: 4;
     width: 40%;
@@ -213,6 +218,10 @@
 
 .features-area {
   background-color: #1F262B;
+
+  .features-item__picture {
+    margin: 59px auto 0;
+  }
 }
 
 .features-video {
@@ -221,6 +230,10 @@
   overflow: hidden;
   background: url('../images/features-video.png') center center / cover no-repeat;
   text-decoration: none;
+
+  .features-item__picture  {
+    margin: 94px auto 0;
+  }
 
   &:hover {
     .features-video__link {

@@ -73,18 +73,23 @@
   }
 
   &-item {
+    font-family: $font-family-second;
     width: 50%;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
     padding: 34px 12px;
+    text-transform: uppercase;
     
     span {
+      font-family: $font-family-base;
       margin-top: 10px;
       display: block;
       font-size: 12px;
       line-height: 14px;
-      color: #BFC3C9;
+      letter-spacing: -1px;
+      color: $grey;
+      text-transform: none;
     }
 
     @media(max-width: 1023px) {

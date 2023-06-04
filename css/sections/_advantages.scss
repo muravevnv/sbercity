@@ -41,10 +41,12 @@
     }
 
     .advantages-item__title {
+      font-family: 'SB Sans Display', sans-serif;
       font-size: 36px;
       line-height: 38px;
       text-transform: uppercase;
       letter-spacing: -1px;
+      font-weight: 400;
 
       @include media-md('down') {
         font-size: 28px;
@@ -58,10 +60,15 @@
     }
 
     .advantages-item__text{
+      max-width: 280px;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.5px;
 
       @include media-md('down') {
         margin: 4px 0 0 0;
         order: 6;
+        color: $white;
       }
     }
 
@@ -76,6 +83,7 @@
         position: static;
         margin: auto 0 4px 0;
         order: 5;
+        color: rgba($white, .64)
       }
     }
   }
@@ -99,6 +107,10 @@
         object-position: center;
       }
     }
+
+    .advantages-item__text {
+      max-width: 80%;
+    }
   }
 
   &-smart {
@@ -107,7 +119,8 @@
     .advantages-item__picture {
       position: absolute;
       max-width: 466px;
-      width: 100%;
+      width: 50%;
+
       z-index: -1;
       bottom: -92px;
       right: 0;
@@ -129,6 +142,15 @@
 
     .advantages-item__text {
       color: #000;
+      max-width: 40%;
+
+      @media(max-width: 1023px)  {
+        max-width: 60%;
+      }
+
+      @include media-md('down') {
+        max-width: 220px;
+      }
     }
   }
 }
@@ -156,6 +178,7 @@
   } 
 
   &__subtitle {
+    font-family: 'SB Sans Display', sans-serif;
     color: #BFC3C9;
     margin-bottom: 16px;
     font-size: 10px;
@@ -170,8 +193,8 @@
 
   &__text {
     opacity: .64;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: -0.5px;
 
     @include media-md('down') {
