@@ -150,6 +150,7 @@
 .finish-type {
   padding: 24px 0;
   display: flex;
+  cursor: pointer;
 
   &.is-active {
     .finish-type__title {

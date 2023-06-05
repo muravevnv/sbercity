@@ -5960,6 +5960,7 @@ textarea.form-control {
 .finish-type {
   padding: 24px 0;
   display: flex;
+  cursor: pointer;
 }
 .finish-type.is-active .finish-type__title {
   color: #5FC5AB;
