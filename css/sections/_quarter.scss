@@ -7,19 +7,14 @@
   }
 }
 
-// .quarter.living {
-//   .quarter-types__item {
-//     color: $black;
+a.quarter-item__status {
+  transition: .3s;
 
-//     &::after {
-//       color: $black;
-//     }
-
-//     &.is-on {
-//       color: #8b8d90;
-//     }
-//   }
-// }
+  &:hover {
+    background-color: #29323A;
+    transition: .3s;
+  }
+}
 
 .quarter-section {
   height: calc(100vh - 64px);
@@ -32,6 +27,10 @@
   &.is-open {
     display: block;
   }
+}
+
+.quarter-gallery {
+  position: relative;
 }
 
 .quarter-head {
@@ -207,7 +206,7 @@
     max-width: 140px;
     padding: 19.5px 12px;
     width: 100%;
-    background-color: #29323A;
+    background-color:#14191D; 
     color: $white;
     font-size: 12px;
     line-height: 15px;
@@ -215,7 +214,6 @@
     text-decoration: none;
 
     @include media-md('down') {
-      display: none;
       min-height: 46px;
       padding: 9px 12px;
     }
@@ -223,29 +221,21 @@
 
   &__info {
     position: absolute;
-    bottom: 24px;
+    bottom: 88px;
     left: 24px;
     display: flex;
     align-items: stretch;
+    z-index: 4;
 
     @include media-md('down') {
       flex-direction: column;
-      bottom: 16px;
+      bottom: 80px;
       left: 16px;
     }
   }
 }
 
-.quarter-offices {
 
-  .quarter-item__status {
-    background-color: #14191D;
-
-    @include media-md('down') {
-      display: block;
-    }
-  }
-}
 
 .slider {
   overflow: hidden;
@@ -281,9 +271,21 @@
     height: 40px;
     padding: 2px;
     cursor: pointer;
+
+    svg {
+      transform: translateX(0px);
+        transition: transform .3s;
+    }
   }
 
   &__prev {
+
+    &:hover {
+      svg {
+        transform: translateX(-3px);
+        transition: transform .3s;
+      }
+    }
     @media(max-width: 1023px) {
       position: absolute;
       top: 0;
@@ -296,6 +298,13 @@
   }
 
   &__next {
+
+    &:hover {
+      svg {
+        transform: translateX(3px);
+        transition: transform .3s;
+      }
+    }
     @media(max-width: 1023px) {
       position: absolute;
       top: 0;

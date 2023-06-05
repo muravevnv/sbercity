@@ -7,7 +7,7 @@
   }
 
   &-main {
-    max-width: 70%;
+    max-width: 65%;
 
     @media(max-width: 1023px) {
       max-width: 100%;
@@ -29,7 +29,7 @@
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    width: 30%;
+    width: 35%;
 
     @media(max-width: 1023px) {
       padding: 0;
@@ -115,6 +115,7 @@
   }
 
   &__item {
+    font-family: $font-family-second;
     font-size: 36px;
     line-height: 38px;
     letter-spacing: -1px;
