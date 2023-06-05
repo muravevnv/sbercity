@@ -7,6 +7,20 @@
   }
 }
 
+// .quarter.living {
+//   .quarter-types__item {
+//     color: $black;
+
+//     &::after {
+//       color: $black;
+//     }
+
+//     &.is-on {
+//       color: #8b8d90;
+//     }
+//   }
+// }
+
 .quarter-section {
   height: calc(100vh - 64px);
   display: none;
