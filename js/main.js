@@ -310,3 +310,12 @@ scaleAnimation($('.standarts-list'), $('.standarts'));
 
 
 
+
+const cursor = document.querySelector('.cursor');
+console.log(cursor)
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.pageX + "px";
+  cursor.style.top = e.pageY + "px";
+  console.log(e.pageX)
+});
+  

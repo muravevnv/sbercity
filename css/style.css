@@ -4251,7 +4251,7 @@ textarea.form-control {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -4261,7 +4261,8 @@ textarea.form-control {
   justify-content: space-between;
   align-items: center;
   background-color: #FFF;
-  z-index: 5;
+  z-index: 99;
+  box-shadow: 0px 4px 11px 0px rgba(34, 60, 80, 0.2);
 }
 @media screen and (max-width: 767.98px) {
   .header {
