@@ -4677,6 +4677,11 @@ textarea.form-control {
 .advantages-comfort .advantages-item__text {
   max-width: 80%;
 }
+@media screen and (max-width: 767.98px) {
+  .advantages-comfort .advantages-item__title {
+    letter-spacing: -0.5px;
+  }
+}
 .advantages-smart {
   overflow: hidden;
   background-color: #ffffff;

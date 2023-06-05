@@ -130,6 +130,12 @@
     .advantages-item__text {
       max-width: 80%;
     }
+
+    .advantages-item__title {
+      @include media-md('down') {
+        letter-spacing: -0.5px;
+      }
+    }
   }
 
   &-smart {
