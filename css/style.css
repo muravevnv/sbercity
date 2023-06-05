@@ -5239,6 +5239,9 @@ textarea.form-control {
   .quarter-head {
     position: static;
     padding: 24px;
+    background: #ffffff;
+    -webkit-backdrop-filter: initial;
+            backdrop-filter: initial;
   }
   .quarter-head__subtitle {
     margin-bottom: 40px;

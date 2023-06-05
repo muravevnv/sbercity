@@ -222,36 +222,6 @@ $finishSections.each(function() {
 
 
 
-
-animations = {
-
-  slideUpInViewXlUp(selector) {
-    const arr = document.body.querySelectorAll(selector);
-    if (arr.length) {
-        arr.forEach(el => {
-
-        gsap.from(el, {
-            yPercent: 150,
-            opacity: 0,
-            ease: "power4.out",
-            duration: 0.8,
-            stagger: 1.4,
-            scrollTrigger: {
-                trigger: el,
-               
-            }
-        });
-
-        });
-    }
-  },
-
-}
-
-// animations.slideUpInViewXlUp('.js-slide-up-xl-up');
-// animations.slideUpInViewXlDown('.js-slide-up-xl-down');
-
-
 function slideFromDown(item, container) {
   let $animationContainer = container;
   let $animationBlocksArr =  item;
@@ -268,13 +238,68 @@ function slideFromDown(item, container) {
       stagger: 0.4,
       scrollTrigger: {
         trigger: $animationContainer,
-        start: "bottom bottom",
+        start: "top 90%",
       },
     }
   );
 }
+
+function slideFromRight(item, container) {
+  let $animationContainer = container;
+  let $animationBlocksArr =  item;
+
+  gsap.fromTo(
+      $animationBlocksArr,
+    { x: "-50%", opacity: 0 },
+    {
+      x: "0%",
+      opacity: 1,
+      delay: .4,
+      duration: 2.5,
+      ease: "expo.out",
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: $animationContainer,
+        start: "top 90%",
+      },
+    }
+  );
+}
+
+function scaleAnimation (item, container) {
+  let $animationContainer = container;
+  let $animationBlocksArr =  item;
+
+  gsap.fromTo(
+      $animationBlocksArr,
+    { scale: 0, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      delay: .2,
+      duration: 1.5,
+      ease: "expo.out",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: $animationContainer,
+        start: "top 90%",
+      },
+    }
+  );
+}
+
 slideFromDown($('.advantages-item'), $('.advantages'));
-slideFromDown($('.advantages-item'), $('.advantages'));
+slideFromDown($('.infrastructure-item'), $('.infrastructure-list'));
+slideFromDown($('.features-item'), $('.features-items'));
+slideFromDown($('.quarter.living'), $('.quarter'));
+slideFromDown($('.quarter.quarter-offices'), $('.quarter'));
+slideFromDown($('.finish'), $('.finish'));
+slideFromDown($('.standarts-sort__item'), $('.standarts-sort'));
+slideFromDown($('.footer__title'), $('.footer__title'));
+slideFromDown($('.footer-company'), $('.footer-company'));
+slideFromDown($('.footer-adress'), $('.footer-adress'));
+slideFromRight($('.infrastructure-map'), $('.infrastructure'));
+scaleAnimation($('.standarts-list'), $('.standarts'));
 
 function animationHero() {
   gsap.fromTo(
@@ -290,7 +315,7 @@ function animationHero() {
     stagger: 0.4,
     scrollTrigger: {
         trigger: $('.hero'),
-        start: "bottom bottom",
+        start: "top 90%",
     },
     }
   );
@@ -304,7 +329,7 @@ function animationHero() {
     duration: 1,
     scrollTrigger: {
       trigger: $('.hero'),
-      start: "bottom bottom",
+      start: "top 90%",
     },
   })
 }

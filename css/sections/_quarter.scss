@@ -58,6 +58,8 @@
   @media(max-width: 1023px) {
     position: static;
     padding: 24px;
+    background: $white;
+    backdrop-filter: initial;
 
     &__subtitle {
       margin-bottom: 40px;
