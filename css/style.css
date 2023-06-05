@@ -3833,6 +3833,13 @@ template {
   font-display: swap;
 }
 @font-face {
+  font-family: "SB Sans Display";
+  src: url("../fonts/SBSansDisplay-Light.woff2") format("woff2"), url("../fonts/SBSansDisplay-Light.woff") format("woff");
+  font-weight: 250;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "SB Sans Text";
   src: url("../fonts/SBSansText-Regular.woff2") format("woff2"), url("../fonts/SBSansText-Regular.woff") format("woff");
   font-weight: 400;
@@ -5213,6 +5220,11 @@ textarea.form-control {
   top: 24px;
   left: 24px;
   z-index: 2;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.25);
+  /* Blur */
+  -webkit-backdrop-filter: blur(32.5px);
+          backdrop-filter: blur(32.5px);
 }
 .quarter-head__subtitle {
   font-family: "SB Sans Display", sans-serif;
@@ -5221,7 +5233,7 @@ textarea.form-control {
   letter-spacing: 1px;
   color: #BFC3C9;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 @media (max-width: 1023px) {
   .quarter-head {
@@ -5243,7 +5255,6 @@ textarea.form-control {
 }
 
 .quarter-types {
-  max-width: 270px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -5262,7 +5273,6 @@ textarea.form-control {
   letter-spacing: -1px;
   color: rgba(255, 255, 255, 0.3);
   padding: 2.5px 0;
-  margin-bottom: 4px;
   margin-right: 8px;
   padding-right: 19px;
   cursor: pointer;
@@ -5282,9 +5292,18 @@ textarea.form-control {
     line-height: 30px;
   }
 }
+.quarter-types__item:last-of-type {
+  margin-right: 0;
+  padding-right: 0;
+}
+.quarter-types__item:last-of-type::after {
+  display: none;
+}
 .quarter-types__item::after {
   content: "/";
   position: absolute;
+  font-family: "SB Sans Display", sans-serif;
+  font-weight: 250;
   right: 0;
   top: 0;
   font-weight: 250;

@@ -5,6 +5,12 @@
 );
 
 @include font-face(
+    'SB Sans Display',
+    '../fonts/SBSansDisplay-Light',
+    250
+);
+
+@include font-face(
     'SB Sans Text',
     '../fonts/SBSansText-Regular',
     400

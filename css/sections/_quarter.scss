@@ -39,6 +39,11 @@
   top: 24px;
   left: 24px;
   z-index: 2;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.25);
+  /* Blur */
+
+  backdrop-filter: blur(32.5px);
 
   &__subtitle {
     font-family: 'SB Sans Display', sans-serif;
@@ -47,7 +52,7 @@
     letter-spacing: 1px;
     color: $grey;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   @media(max-width: 1023px) {
@@ -70,7 +75,7 @@
 }
 
 .quarter-types {
-  max-width: 270px;
+
   display: flex;
   flex-wrap: wrap;
 
@@ -90,7 +95,6 @@
     letter-spacing: -1px;
     color: rgba(255, 255, 255, 0.3);
     padding: 2.5px 0;
-    margin-bottom: 4px;
     margin-right: 8px;
     padding-right: 19px;
     cursor: pointer;
@@ -108,15 +112,24 @@
       line-height: 30px;
     }
 
-
+    &:last-of-type {
+      margin-right: 0;
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
     
     &::after {
       content: '/';
       position: absolute;
+      font-family: 'SB Sans Display', sans-serif;
+      font-weight: 250;
       right: 0;
       top: 0;
       font-weight: 250;
       color: rgba(227, 229, 231, 0.3);
+      
       
       @media(max-width: 1023px) {
         display: none;
