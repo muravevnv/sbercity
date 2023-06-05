@@ -1,3 +1,5 @@
+gsap.registerPlugin('ScrollTrigger');
+
 lozad('.lozad', {
   load: function(el) {
       el.src = el.dataset.src;
@@ -218,14 +220,94 @@ $finishSections.each(function() {
   }
 })
 
-// $('.finish-panel__show').on('click', function(){
-//   $(this).addClass('is-active')
-//   $(this).next().addClass('is-show')
-//   $('.finish-panel-popup').addClass('is-open')
-// })
 
-// $('.finish-panel__close').on('click', function(){
-//   $(this).removeClass('is-show')
-//   $(this).prev().removeClass('is-active')
-//   $('.finish-panel-popup').removeClass('is-open')
-// })
+
+
+animations = {
+
+  slideUpInViewXlUp(selector) {
+    const arr = document.body.querySelectorAll(selector);
+    if (arr.length) {
+        arr.forEach(el => {
+
+        gsap.from(el, {
+            yPercent: 150,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 0.8,
+            stagger: 1.4,
+            scrollTrigger: {
+                trigger: el,
+               
+            }
+        });
+
+        });
+    }
+  },
+
+}
+
+// animations.slideUpInViewXlUp('.js-slide-up-xl-up');
+// animations.slideUpInViewXlDown('.js-slide-up-xl-down');
+
+
+function slideFromDown(item, container) {
+  let $animationContainer = container;
+  let $animationBlocksArr =  item;
+
+  gsap.fromTo(
+      $animationBlocksArr,
+    { y: "50%", opacity: 0 },
+    {
+      y: "0%",
+      opacity: 1,
+      delay: .4,
+      duration: 1.2,
+      ease: "expo.out",
+      stagger: 0.4,
+      scrollTrigger: {
+        trigger: $animationContainer,
+        start: "bottom bottom",
+      },
+    }
+  );
+}
+slideFromDown($('.advantages-item'), $('.advantages'));
+slideFromDown($('.advantages-item'), $('.advantages'));
+
+function animationHero() {
+  gsap.fromTo(
+    $('.hero'),
+  { y: "20%", width: '80%', opacity: 0 },
+  {
+    y: "0%",
+    opacity: 1,
+    delay: .4,
+    width: '100%',
+    duration: 2,
+    ease: "expo.out",
+    stagger: 0.4,
+    scrollTrigger: {
+        trigger: $('.hero'),
+        start: "bottom bottom",
+    },
+    }
+  );
+
+  gsap.fromTo($('.hero__title'),{
+    y: 50, opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    delay: 2,
+    duration: 1,
+    scrollTrigger: {
+      trigger: $('.hero'),
+      start: "bottom bottom",
+    },
+  })
+}
+
+animationHero()
+
