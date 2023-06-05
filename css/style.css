@@ -4338,7 +4338,7 @@ textarea.form-control {
 
 .footer-info {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
 }
 @media (max-width: 1023px) {
@@ -4531,6 +4531,7 @@ textarea.form-control {
 }
 .advantages-city {
   grid-row: span 2;
+  position: relative;
   background: #020303;
   color: #FFF;
 }
@@ -4550,8 +4551,12 @@ textarea.form-control {
   }
 }
 .advantages-city .advantages-item__picture {
-  max-width: 660px;
-  margin: 44px auto 0;
+  max-width: 560px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 767.98px) {
   .advantages-city .advantages-item__picture {
@@ -5814,7 +5819,7 @@ textarea.form-control {
   }
 }
 .finish-main {
-  max-width: 65%;
+  max-width: 70%;
 }
 @media (max-width: 1023px) {
   .finish-main {
@@ -5836,10 +5841,12 @@ textarea.form-control {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  width: 30%;
 }
 @media (max-width: 1023px) {
   .finish-section-info {
     padding: 0;
+    width: 100%;
   }
 }
 .finish-section.is-open {
@@ -5887,7 +5894,12 @@ textarea.form-control {
   }
 }
 .finish-head__text {
+  max-width: 320px;
   margin: auto 0 0 0;
+  color: #9BA1AA;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -1px;
 }
 @media (max-width: 1023px) {
   .finish-head__text {
@@ -6119,6 +6131,7 @@ textarea.form-control {
     background-color: #ffffff;
     padding: 0 24px;
     display: none;
+    z-index: 11;
   }
   .finish-panel-popup.is-open {
     display: block;
@@ -6141,4 +6154,11 @@ textarea.form-control {
   .finish-panel-popup__btn {
     display: block;
   }
+}
+
+.finish-slider {
+  display: none;
+}
+.finish-slider.is-open {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

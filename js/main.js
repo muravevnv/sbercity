@@ -149,7 +149,7 @@ let sortItems = document.querySelector('.standarts-list')
 sortBtns.forEach(function(item){
   item.addEventListener('click', function(){
     let dataSort = item.dataset.sort;
-    console.log(dataSort);
+
     sortBtns.forEach(el=> el.classList.remove('is-on'))
     item.classList.add('is-on')
     sortItems.removeAttribute('class');
@@ -169,6 +169,33 @@ $finishSections.each(function() {
   let $panelOpen = $section.find('.finish-panel__show');
   let $panelClose = $panelOpen.next();
   let $panel = $section.find('.finish-panel-popup');
+  let $sliders = $section.find('.finish-slider');
+  let $types = $section.find('.finish-type');
+
+  
+
+  let $filterControls = $section.find('[data-filter-controls]');
+
+
+  $filterControls.on('click', function(){
+    let $dataFilter = $(this).attr('data-filter-controls');
+    let $dataSection = $section.find(`.finish-slider[data-filter=${$dataFilter}]`);
+
+    $sliders.removeClass('is-open');
+    $dataSection.addClass('is-open');
+    $types.removeClass('is-active');
+    $filterControls.removeClass('is-active')
+
+    $(this).addClass('is-active');
+
+    if($('finish-type__theme-item').has('is-active')) {
+      $(this).closest('.finish-type').addClass('is-active');
+    }
+
+    if($panel) {
+      closePanel();
+    }
+  })
 
   $panelOpen.on('click', function(){
     showPanel();

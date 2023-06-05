@@ -7,7 +7,7 @@
   }
 
   &-main {
-    max-width: 65%;
+    max-width: 70%;
 
     @media(max-width: 1023px) {
       max-width: 100%;
@@ -29,9 +29,11 @@
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+    width: 30%;
 
     @media(max-width: 1023px) {
       padding: 0;
+      width: 100%;
     }
   }
 
@@ -78,7 +80,12 @@
   }
 
   &__text {
+    max-width: 320px;
     margin: auto 0 0 0;
+    color: #9BA1AA;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1px;
 
     @media(max-width: 1023px) {
       display: none;
@@ -334,6 +341,7 @@
     background-color: $white;
     padding: 0 24px;
     display: none;
+    z-index: 11;
 
     &.is-open {
       display: block;
@@ -358,5 +366,14 @@
     @media(max-width: 1023px) {
       display: block;
     }
+  }
+}
+
+.finish-slider {
+
+  display: none;
+
+  &.is-open {
+    display: block;
   }
 }
