@@ -4275,6 +4275,7 @@ textarea.form-control {
   color: #FFF;
   cursor: pointer;
   font-weight: 500;
+  text-decoration: none;
 }
 @media (max-width: 375px) {
   .header__btn {
@@ -5802,6 +5803,9 @@ textarea.form-control {
   transition: 0.2s;
   opacity: 1;
 }
+.standarts-list.is-advanced .standarts-item.is-advanced.is-advanced-default {
+  background: #1F262B;
+}
 @media (max-width: 1023px) {
   .standarts-list.is-advanced .standarts-item.is-advanced {
     order: 50;
@@ -5824,6 +5828,9 @@ textarea.form-control {
   transform: scale(1);
   transition: 0.2s;
   opacity: 1;
+}
+.standarts-list.is-superb .standarts-item.is-superb.is-superb-default {
+  background: #1F262B !important;
 }
 .standarts-list.is-superb .standarts-item.is-superb .standarts-item__title {
   opacity: 1;

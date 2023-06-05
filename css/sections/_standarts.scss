@@ -259,6 +259,10 @@
       transition: 0.2s;
       opacity: 1;
 
+      &.is-advanced-default {
+        background: #1F262B;
+      }
+
       @media (max-width: 1023px) {
         order: 50;
       }
@@ -285,6 +289,10 @@
       transform: scale(1);
       transition: 0.2s;
       opacity: 1;
+
+      &.is-superb-default {
+        background: #1F262B !important;
+      }
 
       .standarts-item__title {
         opacity: 1;
