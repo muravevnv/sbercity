@@ -174,21 +174,28 @@ $finishSections.each(function() {
   let $sliders = $section.find('.finish-slider');
   let $types = $section.find('.finish-type');
 
-  
-
   let $filterControls = $section.find('[data-filter-controls]');
 
 
   $filterControls.on('click', function(){
     let $dataFilter = $(this).attr('data-filter-controls');
     let $dataSection = $section.find(`.finish-slider[data-filter=${$dataFilter}]`);
-
+ 
     $sliders.removeClass('is-open');
     $dataSection.addClass('is-open');
     $types.removeClass('is-active');
     $filterControls.removeClass('is-active')
 
     $(this).addClass('is-active');
+
+    
+    if($dataFilter == 'balanced-classic-l' || $dataFilter == 'balanced-scan-l') {
+      $(this).closest('.finish-type').find('.finish-type__theme-white').addClass('is-active')
+    }
+    
+    if($dataFilter == 'advanced-classic-l' || $dataFilter == 'advanced-scan-l') {
+      $(this).closest('.finish-type').find('.finish-type__theme-white').addClass('is-active')
+    }
 
     if($('finish-type__theme-item').has('is-active')) {
       $(this).closest('.finish-type').addClass('is-active');
@@ -301,38 +308,5 @@ slideFromDown($('.footer-adress'), $('.footer-adress'));
 slideFromRight($('.infrastructure-map'), $('.infrastructure'));
 scaleAnimation($('.standarts-list'), $('.standarts'));
 
-function animationHero() {
-  gsap.fromTo(
-    $('.hero'),
-  { y: "20%", width: '80%', opacity: 0 },
-  {
-    y: "0%",
-    opacity: 1,
-    delay: .4,
-    width: '100%',
-    duration: 2,
-    ease: "expo.out",
-    stagger: 0.4,
-    scrollTrigger: {
-        trigger: $('.hero'),
-        start: "top 90%",
-    },
-    }
-  );
 
-  gsap.fromTo($('.hero__title'),{
-    y: 50, opacity: 0
-  }, {
-    y: 0,
-    opacity: 1,
-    delay: 2,
-    duration: 1,
-    scrollTrigger: {
-      trigger: $('.hero'),
-      start: "top 90%",
-    },
-  })
-}
-
-animationHero()
 

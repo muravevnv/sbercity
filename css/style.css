@@ -3879,6 +3879,13 @@ body {
   margin-right: auto;
 }
 
+.content {
+  margin-top: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 3;
+}
+
 *:focus:not(:focus-visible) {
   outline: none;
 }
@@ -4309,6 +4316,8 @@ textarea.form-control {
 
 .footer {
   background-color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 .footer-main {
   padding: 24px;
@@ -4449,6 +4458,11 @@ textarea.form-control {
   right: 0;
   bottom: 0;
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 50px 24px;
   display: flex;
   align-items: flex-end;
@@ -4828,8 +4842,8 @@ textarea.form-control {
 .infrastructure-item {
   font-family: "SB Sans Display", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   width: 50%;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: 1px;
   padding: 34px 12px;
   text-transform: uppercase;
@@ -4838,8 +4852,8 @@ textarea.form-control {
   font-family: "SB Sans Text", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin-top: 10px;
   display: block;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: -1px;
   color: #BFC3C9;
   text-transform: none;
@@ -5452,8 +5466,8 @@ textarea.form-control {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   padding: 2px;
   cursor: pointer;
 }
